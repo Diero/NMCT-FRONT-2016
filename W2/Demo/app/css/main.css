@@ -1,0 +1,15 @@
+body{
+    margin: 20px;
+}
+
+#main{
+    width: 100%;
+    margin: 5px auto;
+}
+
+#images{
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
+    padding: 20px;
+}
