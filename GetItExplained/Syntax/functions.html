@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+
+        // window.som
+        function som(){
+            var result = 0, i, l = arguments.length;
+            for(i = 0 ; i < l ; i++){
+               result += arguments[i];
+            }
+        }
+
+        //var result  = som(5,8, 8, 5, 9, 3);
+        //var result2 = som(5); //NaN
+        //console.log(result2);
+
+        var onSucces = function(){};
+        var onError = function(){}
+        var onSave = function(){};
+
+        var url = "";
+        var xmlHTTP = new XMLHttpRequest();
+        xmlHTTP.open("GET", url);
+        xmlHTTP.onload = function(){};
+        xmlHTTP.onError = onError;
+
+        //var btn = document.getElementById("saveButton");
+        //btn.addEventListener("click", onSave);
+
+
+        // window.outerFunction
+        function outerFunction(){
+            console.log("outer function");
+            // window.outerFunction.variableOuterfunction
+            var variableOuterfunction = 42;
+
+            return function(){
+                // window.outerFunction.<fct>.variableInnerFunction
+                var variableInnerFunction = "AB";
+                console.log("inner function: " + variableOuterfunction );
+            };
+        };
+
+        var result = outerFunction();
+
+
+
+
+
+    </script>
+
+</body>
+</html>

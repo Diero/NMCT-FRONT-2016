@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+
+
+        /*var person = {
+            firstname: "kevin",
+            email: "kevin@email.com"
+        };*/
+
+        // C#
+        /*class Person{
+            string firstname, email;
+            public Person(fn, email){
+                this.firstname = fn;
+                this.email = email;
+            }
+
+            public string ToString(){}
+        }*/
+
+        function Person(fn, email){
+            // huidig object --> this
+
+            this.firstname = fn;
+            this.email = email;
+
+
+
+            //return this;
+        }
+
+        Person.prototype.toString = function(){
+            return this.firstname;
+        }
+
+        Person.prototype.sendMail = function(){};
+
+        Person.prototype.getFirstname = function(){};
+
+
+        // json --> 1000 personen
+        var k = new Person("kevin", "kevin@mail.com");
+        k.toString();
+
+
+
+    </script>
+
+</body>
+</html>
