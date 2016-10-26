@@ -6,17 +6,20 @@
         return {
           getData: function(url){
               var p = new Promise(function(ok, nok){
+                  /* vanaf hier */
                   var xmlhttp = new XMLHttpRequest();
                   xmlhttp.onerror = function(err){nok(err);};
                   xmlhttp.onload = function(resp){
 
                       if(xmlhttp.readyState === 4){
-                          ok(JSON.parse(xmlhttp.responseText));
+                          return xmlhttp.responseText
                       }
 
                   };
                   xmlhttp.open("GET", url, true);
                   xmlhttp.send();
+
+                  /* tot hier */
               });
               return p;
           }
